@@ -80,7 +80,7 @@ export default async function Project({ params }: ProjectPageProps) {
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Faiuzllah Firozi"}</p>
+              <p className="font-medium">{"Faizllah Firozi"}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>

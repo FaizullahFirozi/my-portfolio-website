@@ -28,7 +28,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
   description:
-    "Faiuzllah Firozi - Full Stack Developer building responsive websites and full stack web applications. Explore my projects, experience, and contributions.",
+    "Faizllah Firozi - Full Stack Developer building responsive websites and full stack web applications. Explore my projects, experience, and contributions.",
   alternates: {
     canonical: siteConfig.url,
   },
@@ -87,8 +87,8 @@ export default function IndexPage() {
             height={100}
             width={100}
             sizes="100vw"
-            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Faiuzllah Firozi - Full Stack Developer Portfolio"
+            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[18rem] border-8 border-primary"
+            alt="Faizllah Firozi - Full Stack Developer Portfolio"
             priority
           />
           <AnimatedText
@@ -96,14 +96,14 @@ export default function IndexPage() {
             delay={0.2}
             className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Faiuzllah Firozi
+        <small className="pr- norican_4ed60638-module__s9oSRG__className text-2x2">Master</small> Faizllah Firozi
           </AnimatedText>
           <AnimatedText
             as="h3"
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Full Stack Developer
+           🏅 Full Stack Developer 🏅
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
@@ -114,7 +114,7 @@ export default function IndexPage() {
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
-                href={"/resume"}
+                href={"https://drive.google.com/file/d/18tsoeQq9BTqokfVVq9qwTyZ4DMtyWOmJ/view?usp=drive_link"}
                 target="_blank"
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
@@ -124,15 +124,14 @@ export default function IndexPage() {
             </AnimatedText>
             <AnimatedText delay={0.8}>
               <Link
-                href={"/contact"}
-                rel="noreferrer"
+                href="tel:+93780002528"
                 className={cn(
                   buttonVariants({
                     variant: "outline",
                     size: "lg",
                   })
                 )}
-                aria-label="Contact Faiuzllah Firozi"
+                aria-label="Call Faizllah Firozi at +93780002528"
               >
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>

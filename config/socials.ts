@@ -12,19 +12,19 @@ export const SocialLinks: SocialInterface[] = [
     name: "Github",
     username: "@faizullahfirozi",
     icon: Icons.gitHub,
-    link: "https://github.com/faiuzllahfirozi",
+    link: "https://github.com/faizllahfirozi",
   },
   {
     name: "LinkedIn",
-    username: "Faiuzllah Firozi",
+    username: "Faizllah Firozi",
     icon: Icons.linkedin,
-    link: "https://www.linkedin.com/in/faiuzllahfirozi",
+    link: "https://www.linkedin.com/in/faizllahfirozi",
   },
   {
     name: "Twitter",
     username: "@faizullahfirozi",
     icon: Icons.twitter,
-    link: "https://twitter.com/faiuzllahfirozi",
+    link: "https://twitter.com/faizllahfirozi",
   },
   {
     name: "Gmail",

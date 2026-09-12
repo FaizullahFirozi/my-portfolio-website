@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "Faiuzllah Firozi - Full Stack Developer",
-  authorName: "Faiuzllah Firozi",
-  username: "faiuzllahfirozi",
+  name: "Faizllah Firozi - Full Stack Developer",
+  authorName: "Faizllah Firozi",
+  username: "faizllahfirozi",
   description:
-    "Faiuzllah Firozi - Full Stack Developer building responsive websites and full stack web applications. Explore my projects, experience, and contributions in web development.",
-  url: "https://faiuzllahfirozi.xyz",
+    "Faizllah Firozi - Full Stack Developer building responsive websites and full stack web applications. Explore my projects, experience, and contributions in web development.",
+  url: "https://faizllahfirozi.xyz",
   links: {
-    twitter: "https://x.com/faiuzllahfirozi",
-    github: "https://github.com/faiuzllahfirozi",
+    twitter: "https://x.com/faizllahfirozi",
+    github: "https://github.com/faizllahfirozi",
     templateRepo: "https://github.com/FaizullahFirozi/my-portfolio-website",
   },
   ogImage:
@@ -17,7 +17,7 @@ export const siteConfig = {
   logoIcon:
     "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/faiuzllah-logo.png",
   keywords: [
-    "Faiuzllah Firozi",
+    "Faizllah Firozi",
     "Full Stack Developer",
     "Web Application Developer",
     "Software Engineer",

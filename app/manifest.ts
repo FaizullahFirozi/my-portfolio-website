@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Faiuzllah Firozi | Full Stack Developer",
-    short_name: "Faiuzllah Firozi",
+    name: "Faizllah Firozi | Full Stack Developer",
+    short_name: "Faizllah Firozi",
     description:
-      "Faiuzllah Firozi - Full Stack Developer building responsive websites and full stack web applications.",
+      "Faizllah Firozi - Full Stack Developer building responsive websites and full stack web applications.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

@@ -18,7 +18,7 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Faiuzllah Firozi's portfolio website.",
+      description: "Faizllah Firozi's portfolio website.",
     },
   },
   skills: {
@@ -27,7 +27,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Skills",
       description:
-        "Faiuzllah Firozi's key skills that define his professional identity.",
+        "Faizllah Firozi's key skills that define his professional identity.",
     },
   },
   projects: {
@@ -35,7 +35,7 @@ export const pagesConfig: PagesConfig = {
     description: "Showcasing impactful projects and technical achievements.",
     metadata: {
       title: "Projects",
-      description: "Faiuzllah Firozi's projects in building web applications.",
+      description: "Faizllah Firozi's projects in building web applications.",
     },
   },
   contact: {
@@ -43,7 +43,7 @@ export const pagesConfig: PagesConfig = {
     description: "Let's connect and explore collaborations.",
     metadata: {
       title: "Contact",
-      description: "Contact Faiuzllah Firozi.",
+      description: "Contact Faizllah Firozi.",
     },
   },
   contributions: {
@@ -52,15 +52,15 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Contributions",
       description:
-        "Faiuzllah Firozi's open-source contributions and community involvement.",
+        "Faizllah Firozi's open-source contributions and community involvement.",
     },
   },
   resume: {
     title: "Resume",
-    description: "Faiuzllah Firozi's resume.",
+    description: "Faizllah Firozi's resume.",
     metadata: {
       title: "Resume",
-      description: "Faiuzllah Firozi's resume.",
+      description: "Faizllah Firozi's resume.",
     },
   },
   blogs: {
@@ -70,7 +70,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Blogs",
       description:
-        "Faiuzllah Firozi's blog — thoughts on AI, software engineering, and building in public.",
+        "Faizllah Firozi's blog — thoughts on AI, software engineering, and building in public.",
     },
   },
   experience: {
@@ -79,7 +79,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Experience",
       description:
-        "Faiuzllah Firozi's professional journey and experience timeline.",
+        "Faizllah Firozi's professional journey and experience timeline.",
     },
   },
 };
