@@ -2,8 +2,10 @@
 
 import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/providers/language-provider";
 
 export function BackToTop() {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -26,9 +28,9 @@ export function BackToTop() {
             : "smooth",
         })
       }
-      aria-label="Back to top"
-      title="Back to top"
-      className="fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring focus-visible:ring-offset-2"
+      aria-label={t("Back to top")}
+      title={t("Back to top")}
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
       <ArrowUp className="h-6 w-6" aria-hidden="true" />
     </button>

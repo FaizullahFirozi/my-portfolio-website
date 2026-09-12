@@ -10,6 +10,7 @@ import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/providers/language-provider";
 
 interface MainNavProps {
   items?: any[];
@@ -38,6 +39,7 @@ const navItemVariants = {
 };
 
 export function MainNav({ items, children }: MainNavProps) {
+  const { t } = useLanguage();
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
@@ -53,14 +55,14 @@ export function MainNav({ items, children }: MainNavProps) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Link href="/" className="hidden items-center space-x-2 md:flex">
+        <Link href="/" className="hidden items-center space-x-2 xl:flex">
           <span className={cn(norican.className, "text-2xl")}>
-            {siteConfig.authorName}
+            {t(siteConfig.authorName)}
           </span>
         </Link>
       </motion.div>
       {items?.length ? (
-        <nav className="hidden gap-6 md:flex items-center">
+        <nav className="glass-nav hidden gap-1 xl:flex items-center" aria-label="Main navigation">
           {items?.map((item, index) => (
             <motion.div
               key={index}
@@ -68,33 +70,32 @@ export function MainNav({ items, children }: MainNavProps) {
               initial="hidden"
               animate="visible"
               variants={navItemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               <Link
                 href={item.disabled ? "#" : item.href}
+                aria-current={item.href.startsWith(`/${segment}`) ? "page" : undefined}
                 className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                  "glass-nav-link flex items-center text-sm font-medium",
                   item.href.startsWith(`/${segment}`)
                     ? "text-foreground"
                     : "text-foreground/60",
                   item.disabled && "cursor-not-allowed opacity-80"
                 )}
               >
-                {item.title}
+                {t(item.title)}
               </Link>
             </motion.div>
           ))}
         </nav>
       ) : null}
       <motion.button
-        className="flex items-center space-x-2 md:hidden"
+        className="flex items-center space-x-2 xl:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-        <span className="font-bold">Menu</span>
+        <span className="font-bold">{t("Menu")}</span>
       </motion.button>
       {showMobileMenu && items && (
         <MobileNav items={items}>{children}</MobileNav>

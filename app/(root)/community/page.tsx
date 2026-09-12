@@ -1,3 +1,4 @@
+import { TranslatedText } from "@/providers/language-provider";
 import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 };
 
 const descriptions: Record<string, string> = {
+  WhatsApp: "Message me directly to discuss your ideas or a project.",
   Facebook: "Connect with me on Facebook and join the conversation.",
   YouTube: "Visit my YouTube channel and subscribe to follow along.",
   Github: "Explore my code, report an issue, or contribute to a project.",
@@ -31,15 +33,15 @@ export default function CommunityPage() {
     >
       <section className="rounded-2xl border bg-muted/50 p-6 sm:p-10">
         <p className="text-sm font-medium text-muted-foreground">
-          Start a conversation
+          <TranslatedText>Start a conversation</TranslatedText>
         </p>
         <h2 className="mt-3 font-heading text-2xl sm:text-3xl">
-          Have something in mind?
+          <TranslatedText>Have something in mind?</TranslatedText>
         </h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-          Working through a web development question, exploring a project idea,
+          <TranslatedText>Working through a web development question, exploring a project idea,
           or looking to collaborate? Get in touch and tell me what you're
-          building.
+          building.</TranslatedText>
         </p>
         <a
           href="https://wa.me/93780002528"
@@ -48,14 +50,14 @@ export default function CommunityPage() {
           className={`${buttonVariants({ size: "lg" })} mt-6 gap-2`}
         >
           <SiWhatsapp className="h-5 w-5" aria-hidden="true" />
-          Message me on WhatsApp
+          <TranslatedText>Message me on WhatsApp</TranslatedText>
           <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
         </a>
       </section>
 
       <section className="mt-10" aria-labelledby="connect-heading">
         <h2 id="connect-heading" className="font-heading text-2xl">
-          More ways to connect
+          <TranslatedText>More ways to connect</TranslatedText>
         </h2>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
           {SocialLinks.filter((social) => social.name in descriptions).map(
@@ -84,7 +86,7 @@ export default function CommunityPage() {
                         : social.name}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {descriptions[social.name]}
+                    <TranslatedText>{descriptions[social.name]}</TranslatedText>
                   </p>
                 </a>
               );
@@ -95,16 +97,16 @@ export default function CommunityPage() {
 
       <div className="mt-10 flex flex-wrap items-center gap-4 border-t pt-6">
         <p className="text-muted-foreground">
-          Looking for something to explore first?
+          <TranslatedText>Looking for something to explore first?</TranslatedText>
         </p>
         <Link
           href="/projects"
           className={buttonVariants({ variant: "outline" })}
         >
-          Browse projects
+          <TranslatedText>Browse projects</TranslatedText>
         </Link>
         <Link href="/blogs" className={buttonVariants({ variant: "outline" })}>
-          Read the blog
+          <TranslatedText>Read the blog</TranslatedText>
         </Link>
       </div>
     </PageContainer>

@@ -1,3 +1,4 @@
+import { TranslatedText } from "@/providers/language-provider";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +97,7 @@ export default function IndexPage() {
             delay={0.2}
             className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-        <small className="pr- norican_4ed60638-module__s9oSRG__className text-2x2">Master</small> Faizllah Firozi
+        <small className="pr- norican_4ed60638-module__s9oSRG__className text-2x2">Master</small> <TranslatedText>Faizllah Firozi</TranslatedText>
           </AnimatedText>
           <AnimatedText
             as="h3"
@@ -107,7 +108,7 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Full Stack Developer building responsive websites and web applications.
+              <TranslatedText>Full Stack Developer building responsive websites and web applications.</TranslatedText>
             </p>
           </div>
 
@@ -119,7 +120,7 @@ export default function IndexPage() {
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View resume"
               >
-                <Icons.post className="w-4 h-4 mr-2" /> Resume
+                <Icons.post className="w-4 h-4 mr-2" /> <TranslatedText>Resume</TranslatedText>
               </Link>
             </AnimatedText>
             <AnimatedText delay={0.8}>
@@ -133,7 +134,7 @@ export default function IndexPage() {
                 )}
                 aria-label="Call Faizllah Firozi at +93780002528"
               >
-                <Icons.contact className="w-4 h-4 mr-2" /> Contact
+                <Icons.contact className="w-4 h-4 mr-2" /> <TranslatedText>Contact</TranslatedText>
               </Link>
             </AnimatedText>
           </div>
@@ -179,7 +180,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/projects">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> <TranslatedText>View All</TranslatedText>
             </Button>
           </Link>
         </AnimatedText>
@@ -218,7 +219,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/experience">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> <TranslatedText>View All</TranslatedText>
             </Button>
           </Link>
         </AnimatedText>
@@ -247,7 +248,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/contributions">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> <TranslatedText>View All</TranslatedText>
             </Button>
           </Link>
         </AnimatedText>
@@ -287,7 +288,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/blogs">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> <TranslatedText>View All</TranslatedText>
             </Button>
           </Link>
         </AnimatedText>
@@ -316,7 +317,7 @@ export default function IndexPage() {
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
+              <Icons.chevronDown className="mr-2 h-4 w-4" /> <TranslatedText>View All</TranslatedText>
             </Button>
           </Link>
         </AnimatedText>

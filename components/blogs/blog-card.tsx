@@ -1,3 +1,4 @@
+import { TranslatedText } from "@/providers/language-provider";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -75,7 +76,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
               {blog.readingTime && (
                 <span className="flex items-center gap-1">
                   <Icons.clock className="w-3.5 h-3.5" />
-                  {blog.readingTime} min read
+                  {blog.readingTime} <TranslatedText>min read</TranslatedText>
                 </span>
               )}
             </div>
@@ -84,7 +85,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
               className="inline-flex items-center gap-0.5 text-xs font-medium text-muted-foreground group-hover:text-primary transition-colors duration-200"
               aria-hidden="true"
             >
-              Read
+              <TranslatedText>Read</TranslatedText>
               <Icons.chevronRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
             </span>
           </div>

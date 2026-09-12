@@ -1,3 +1,4 @@
+import { TranslatedText } from "@/providers/language-provider";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,7 +34,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <Link href={`/projects/${project.id}`} className="mt-auto">
           <Button variant={"default"} className="mt-2 w-full sm:w-auto">
-            Read more
+            <TranslatedText>Read more</TranslatedText>
             <Icons.chevronRight className="w-4 ml-1" />
           </Button>
         </Link>

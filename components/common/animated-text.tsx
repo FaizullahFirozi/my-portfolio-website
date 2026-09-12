@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { useLanguage } from "@/providers/language-provider";
 
 interface AnimatedTextProps {
   children: ReactNode;
@@ -33,6 +34,7 @@ export const AnimatedText = ({
   as = "div",
 }: AnimatedTextProps) => {
   const Component = motion[as];
+  const { t } = useLanguage();
 
   return (
     <Component
@@ -42,7 +44,7 @@ export const AnimatedText = ({
       variants={textVariants}
       className={className}
     >
-      {children}
+      {typeof children === "string" ? t(children) : children}
     </Component>
   );
 };

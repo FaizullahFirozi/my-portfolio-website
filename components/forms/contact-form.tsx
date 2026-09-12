@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/providers/language-provider";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -18,18 +19,20 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useModalStore } from "@/hooks/use-modal-store";
 
-const formSchema = z.object({
+const createFormSchema = (t: (text: string) => string) => z.object({
   name: z.string().min(3, {
-    message: "Name must contain at least 3 characters.",
+    message: t("Name must contain at least 3 characters."),
   }),
-  email: z.string().email("Please enter a valid email."),
+  email: z.string().email(t("Please enter a valid email.")),
   message: z.string().min(10, {
-    message: "Please write something more descriptive.",
+    message: t("Please write something more descriptive."),
   }),
   social: z.string().url().optional().or(z.literal("")),
 });
 
 export function ContactForm() {
+  const { t } = useLanguage();
+  const formSchema = createFormSchema(t);
   const storeModal = useModalStore();
 
   // const [open, setOpen] = useState(false);
@@ -59,9 +62,9 @@ export function ContactForm() {
 
       if (response.status === 200) {
         storeModal.onOpen({
-          title: "Thankyou!",
+          title: t("Thankyou!"),
           description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
+            t("Your message has been received! I appreciate your contact and will get back to you shortly."),
           icon: Icons.successAnimated,
         });
       }
@@ -81,9 +84,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{t("Name")}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your name" {...field} />
+                <Input placeholder={t("Enter your name")} {...field} />
               </FormControl>
               {/* <FormDescription>
                                 This is your public display name.
@@ -97,9 +100,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{t("Email")}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" {...field} />
+                <Input placeholder={t("Enter your email")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -110,9 +113,9 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{t("Message")}</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
+                <Textarea placeholder={t("Enter your message")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -123,9 +126,9 @@ export function ContactForm() {
           name="social"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Social (optional)</FormLabel>
+              <FormLabel>{t("Social (optional)")}</FormLabel>
               <FormControl>
-                <Input placeholder="Link for social account" {...field} />
+                <Input placeholder={t("Link for social account")} {...field} />
               </FormControl>
               {/* <FormDescription>
                                 This is your public display name.
@@ -134,7 +137,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">{t("Submit")}</Button>
       </form>
     </Form>
   );

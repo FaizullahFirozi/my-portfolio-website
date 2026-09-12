@@ -3,7 +3,6 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
-import { SiWhatsapp } from "react-icons/si";
 
 import { Analytics } from "@/components/common/analytics";
 import { BackToTop } from "@/components/common/back-to-top";
@@ -12,6 +11,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
+import { LanguageProvider } from "@/providers/language-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -124,22 +124,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
             "synthwave",
           ]}
         >
+          <LanguageProvider>
           {children}
           <Analytics />
           <Toaster />
           <ModalProvider />
           <BackToTop />
+          </LanguageProvider>
         </ThemeProvider>
-        <a
-          href="https://wa.me/93780002528"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contact me on WhatsApp"
-          title="Contact me on WhatsApp"
-          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-colors hover:bg-[#128C7E] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50 focus-visible:ring-offset-2"
-        >
-          <SiWhatsapp className="h-7 w-7" aria-hidden="true" />
-        </a>
       </body>
       {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>

@@ -1,4 +1,4 @@
-import { SiFacebook, SiYoutube } from "react-icons/si";
+import { SiFacebook, SiWhatsapp, SiYoutube } from "react-icons/si";
 
 import { Icons } from "@/components/common/icons";
 
@@ -39,6 +39,12 @@ export const SocialLinks: SocialInterface[] = [
     username: "@faizullahfirozi",
     icon: SiYoutube,
     link: "https://www.youtube.com/@faizullahfirozi",
+  },
+  {
+    name: "WhatsApp",
+    username: "+93 780 002 528",
+    icon: SiWhatsapp,
+    link: "https://wa.me/93780002528",
   },
   {
     name: "Gmail",
