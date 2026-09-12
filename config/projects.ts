@@ -30,13 +30,13 @@ export interface ProjectInterface {
 export const Projects: ProjectInterface[] = [
   {
     id: "portfolio-template",
-    companyName: "Portfolio Website (130+ GitHub stars)",
+    companyName: "Portfolio Website (13+ GitHub stars)",
     type: "Personal",
-    category: ["Web Dev", "Frontend", "UI/UX"],
+    category: ["Web Dev", "Frontend", "UI/UX" ],
     shortDescription:
       "Open-source Next.js portfolio template recognized and forked by developers worldwide, optimized for SEO/AEO and performance.",
-    websiteLink: "https://nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/minimal-next-portfolio",
+    websiteLink: "https://faizullahfirozi.vercel.app",
+    githubLink: "https://github.com/faizullahfirozi/my-portfolio-website",
     techStack: [
       "Next.js",
       "React",
