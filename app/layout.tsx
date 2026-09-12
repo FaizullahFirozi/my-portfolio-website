@@ -97,10 +97,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID;
-  if (!GA_ID) {
-    throw new Error("Missing Google Analytics ID");
-  }
+  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID?.trim();
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -138,7 +135,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           strategy="afterInteractive"
         />
       </body>
-      <GoogleAnalytics gaId={GA_ID} />
+      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
     </html>
   );
 }
