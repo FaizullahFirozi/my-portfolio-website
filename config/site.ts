@@ -1,13 +1,13 @@
 export const siteConfig = {
   name: "Faizllah Firozi - Full Stack Developer",
   authorName: "Faizllah Firozi",
-  username: "faizllahfirozi",
+  username: "faizullahfirozi",
   description:
     "Faizllah Firozi - Full Stack Developer building responsive websites and full stack web applications. Explore my projects, experience, and contributions in web development.",
-  url: "https://faizllahfirozi.xyz",
+  url: "https://faizullahfirozi.vercel.app",
   links: {
-    twitter: "https://x.com/faizllahfirozi",
-    github: "https://github.com/faizllahfirozi",
+    twitter: "https://x.com/faizullahfirozi",
+    github: "https://github.com/faizullahfirozi",
     templateRepo: "https://github.com/FaizullahFirozi/my-portfolio-website",
   },
   ogImage:
