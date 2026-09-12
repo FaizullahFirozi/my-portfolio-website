@@ -22,6 +22,8 @@ import { featuredSkills } from "@/config/skills";
 import { getFeaturedBlogs } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+ 
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
@@ -66,6 +68,7 @@ export default function IndexPage() {
 
   return (
     <ClientPageWrapper>
+       <SpeedInsights />
       <Script
         id="schema-person"
         type="application/ld+json"
